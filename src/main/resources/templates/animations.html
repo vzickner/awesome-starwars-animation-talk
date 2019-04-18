@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome Animations!</title>
+</head>
+<body style="background:black">
+<span th:each="link : ${links}"><img th:src="${link}" /></span>
+</body>
+</html>

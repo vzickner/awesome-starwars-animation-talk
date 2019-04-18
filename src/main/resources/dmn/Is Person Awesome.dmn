@@ -1,0 +1,61 @@
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101" id="definition_de8755ff-6175-11e9-ae71-acde48001122" name="Is Person Awesome" namespace="http://www.flowable.org/dmn">
+  <decision id="isPersonAwesome" name="Is Person Awesome">
+    <decisionTable id="decisionTable_de8755ff-6175-11e9-ae71-acde48001122" hitPolicy="FIRST">
+      <input label="Height">
+        <inputExpression id="inputExpression_1" typeRef="number">
+          <text>people.height</text>
+        </inputExpression>
+      </input>
+      <input label="Number of Starships">
+        <inputExpression id="inputExpression_3" typeRef="number">
+          <text>people.starships.size()</text>
+        </inputExpression>
+      </input>
+      <output id="outputExpression_2" label="Awesome?" name="awesome" typeRef="boolean"></output>
+      <rule>
+        <inputEntry id="inputEntry_1_1">
+          <text><![CDATA[>= 170]]></text>
+        </inputEntry>
+        <inputEntry id="inputEntry_3_1">
+          <text><![CDATA[>= 2]]></text>
+        </inputEntry>
+        <outputEntry id="outputEntry_2_1">
+          <text><![CDATA[true]]></text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry id="inputEntry_1_2">
+          <text><![CDATA[-]]></text>
+        </inputEntry>
+        <inputEntry id="inputEntry_3_2">
+          <text><![CDATA[>= 5]]></text>
+        </inputEntry>
+        <outputEntry id="outputEntry_2_2">
+          <text><![CDATA[true]]></text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry id="inputEntry_1_3">
+          <text><![CDATA[>= 200]]></text>
+        </inputEntry>
+        <inputEntry id="inputEntry_3_3">
+          <text><![CDATA[-]]></text>
+        </inputEntry>
+        <outputEntry id="outputEntry_2_3">
+          <text><![CDATA[true]]></text>
+        </outputEntry>
+      </rule>
+      <rule>
+        <inputEntry id="inputEntry_1_4">
+          <text><![CDATA[-]]></text>
+        </inputEntry>
+        <inputEntry id="inputEntry_3_4">
+          <text><![CDATA[-]]></text>
+        </inputEntry>
+        <outputEntry id="outputEntry_2_4">
+          <text><![CDATA[false]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
